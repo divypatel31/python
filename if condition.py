@@ -54,8 +54,8 @@ print("no. of digits is",len(a))
 #7
 a=int(input("enter the number"))
 
-if a%400==0:
-    print("this",a," is leap year")
+if a%400=!0 or a%4==0 and a%100==0:
+    print("this",a," is  leap year")
 else:
     print("this",a," is not leap year")
 
@@ -106,11 +106,3 @@ else:
     print("the point are not coolinear")
 
 #12
-
-    
-    
-
-
-
-    
-
