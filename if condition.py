@@ -106,3 +106,65 @@ else:
     print("the point are not coolinear")
 
 #12
+def poi_pos(r,center,point):
+    dist = ((center[0]**2 - point[0]**2) - (center[1]**2 - point[1]**2))**0.5
+    if dist > r:
+        print("Point lies outside the circle.")
+    elif dist == r:
+        print("Point lies on the circle.")
+    else:
+        print("Point lies inside the circle")    
+
+r = int(input("Enter radius: "))
+cx = int(input("Enter center x: "))
+cy = int(input("Enter center y: "))
+px = int(input("Enter point x: "))
+py = int(input("Enter point y: "))
+
+poi_pos(r,(cx,cy),(px,py))
+#13
+words = ["zero","one","two","three","four","five",'six', "seven","eight", "nine", "ten", "eleven","twelve", "thirteen"]
+for i in range(0,20):
+    if i < 14:
+        print(words[i])
+    else: 
+        print(f"{words[i-10]}teen")
+#14
+def pass_or_fail(s1,s2,s3):
+    if s1<=39 or s2 <= 39 or s3 <= 39:
+        return "Fail"
+    return "Pass"
+def assign_grade(grade):
+    if grade <= 100 and grade>=80:
+        return 'O'
+    elif grade>= 79:
+        return 'A+'
+    elif grade >= 69: 
+        return 'A'
+    elif grade >= 59 and grade >= 55:
+        return 'B+'
+    elif grade >= 54 and grade >= 50:
+        return 'B'
+    elif grade >= 49 and grade >= 45:
+        return 'C' 
+    elif grade >= 44 and grade >= 40:
+        return 'P'
+    elif grade >= 39 and grade >= 0:
+        return 'F'  
+
+s1 = int(input("Enter subject 1 marks: "))
+s2 = int(input("Enter subject 2 marks: "))
+s3 = int(input("Enter subject 3 marks: "))
+
+total = s1+s2+s3
+avg = total/3
+s1G = assign_grade(s1)
+s2G = assign_grade(s2)
+s3G = assign_grade(s2)
+
+print(f"Total: {total}")
+print(f"Average: {avg}")
+print(f"Result: {pass_or_fail(s1,s2,s3)}")
+print(f"Subject 1 : Grade: {s1G}")
+print(f"Subject 2 : Grade: {s2G}")
+print(f"Subject 3 : Grade: {s3G}")
