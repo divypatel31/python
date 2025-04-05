@@ -192,3 +192,50 @@ def length(string):
 
 string = input("Enter a string: ")
 print(length(string))
+
+#function part-3
+#1
+def fun():
+    print("This is fun()")
+
+def disp():
+    print("This is disp()")
+
+def msg():
+    print("This is msg()")
+
+functions = [fun, disp, msg]
+
+for f in functions:
+    f()
+
+#2
+list1 = [1, 2, 3, 4, 5, 6]
+list2 = [6, 5, 4, 3, 2, 1]
+
+result = list(map(lambda x, y: x + y, list1, list2))
+print("Resultant list:", result)
+
+#3
+import random
+
+nums = random.sample(range(-15, 16), 10)
+squares = [x**2 for x in nums]
+
+print("Random numbers:", nums)
+print("Squares:", squares)
+
+#4
+lst = ['madam', 'Python', 'malayalam', 12321]
+
+for item in lst:
+    if str(item) == str(item)[::-1]:
+        print(f"Palindrome: {item}")
+
+#5
+faculty = ['Dr. Sharma', 'Prof. Radhakrishnan', 'Ms. Patel', 'Dr. Suresh', 'Professor Mehta']
+long_names = list(filter(lambda name: len(name) > 8, faculty))
+
+print("Names longer than 8 characters:")
+for name in long_names:
+    print(name)
